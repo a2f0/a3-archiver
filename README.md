@@ -1,6 +1,6 @@
 # S3 Archiver
 
-Bulk storage archiver to avoid large costs associated Dropbox, Google Drive, etc.
+Simple sync setup for s3.
 
 ## Usage
 
