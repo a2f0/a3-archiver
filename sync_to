@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+# Get the current directory of the running script
+DIR=${0:a:h}
+cd $DIR
+unset ARCHIVER_BUCKET
+source $DIR/.env
+echo "Running archiver for: $ARCHIVER_BUCKET"
+aws s3 sync ./data s3://$ARCHIVER_BUCKET  --exclude "*.DS_Store*"

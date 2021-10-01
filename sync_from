@@ -6,3 +6,4 @@ cd $DIR
 unset ARCHIVER_BUCKET
 source $DIR/.env
 echo "Running archiver for: $ARCHIVER_BUCKET"
+aws s3 sync s3://$ARCHIVER_BUCKET ./data 
