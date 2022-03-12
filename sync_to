@@ -6,4 +6,5 @@ cd $DIR
 unset ARCHIVER_BUCKET
 source $DIR/.env
 echo "Running archiver for: $ARCHIVER_BUCKET"
+# optionally add --delete to delete files that exist in the destination byt not source
 aws s3 sync ./data s3://$ARCHIVER_BUCKET  --exclude "*.DS_Store*"
