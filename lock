@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+SCRIPT_DIR=${0:a:h}
+find $SCRIPT_DIR/data -type f -exec chmod 400 {} +
+find $SCRIPT_DIR/data -type d -exec chmod 700 {} +
+
